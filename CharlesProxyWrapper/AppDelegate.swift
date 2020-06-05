@@ -17,43 +17,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var charlesProcessObserver: NSKeyValueObservation?
     private var charlesInstance: NSRunningApplication?
     
-    var window: NSWindow!
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         NSApp.setActivationPolicy(.accessory)
         
         guard let charlesURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: charlesBundleID) else {
-            // TODO let user pick their install location or show error
-            print("Couldn't find Charles install")
+            AlertController.presentMissingCharlesInstallWindow()
             return
         }
-
         
         NSWorkspace.shared.openApplication(at: charlesURL, configuration: .init()) { [weak self] charlesInstance, error in
             guard let self = self else { return }
             
             guard let charlesInstance = charlesInstance,
                 error == nil else {
-                print("failed to open charles")
-                return
+                    DispatchQueue.main.async {
+                        AlertController.showGenericOKAlert(
+                            title: "Failed to open Charles.",
+                            message: error?.localizedDescription ?? "Unknown error. 🤷‍♀️ \n\nPlease report this bug on GitHub.",
+                            style: .critical,
+                            terminateOnClose: true)
+                    }
+                    return
             }
             
-            print("got charles instance with pid: \(charlesInstance.processIdentifier), isTerminated: \(charlesInstance.isTerminated)")
             self.charlesInstance = charlesInstance
             self.charlesProcessObserver = charlesInstance.observe(\.isTerminated, changeHandler: self.observedApplicationIsTerminatedChange(_:isTerminated:))
         }
-        // Create the SwiftUI view that provides the window contents.
-//        let contentView = ContentView()
-//
-//        // Create the window and set the content view.
-//        window = NSWindow(
-//            contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
-//            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-//            backing: .buffered, defer: false)
-//        window.center()
-//        window.setFrameAutosaveName("Main Window")
-//        window.contentView = NSHostingView(rootView: contentView)
-//        window.makeKeyAndOrderFront(nil)
     }
     
     private func observedApplicationIsTerminatedChange(_ application: NSRunningApplication, isTerminated: NSKeyValueObservedChange<Bool>) {
@@ -61,11 +50,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let webProxyOutput = ProcessRunner.shell("/usr/sbin/networksetup", ["-setwebproxystate", "Wi-Fi", "off"])
             let secureWebProxyOutput = ProcessRunner.shell("/usr/sbin/networksetup", ["-setsecurewebproxystate", "Wi-Fi", "off"])
             
-            if let errorMessage = [webProxyOutput, secureWebProxyOutput]
+            if let _ = [webProxyOutput, secureWebProxyOutput]
                 .compactMap({ $0 })
                 .filter({ !$0.isEmpty })
                 .first {
-                print("error deactivating proxies: \(errorMessage)")
+                AlertController.showGenericOKAlert(title: "An error occurred disabling Wi-Fi proxies.", message: "Please report this bug on GitHub.")
             }
         }
         
