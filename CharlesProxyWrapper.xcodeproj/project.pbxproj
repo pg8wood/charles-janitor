@@ -14,6 +14,7 @@
 		B853A763248AD40800838ECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B853A761248AD40800838ECC /* Main.storyboard */; };
 		B853A76F248AD40800838ECC /* CharlesProxyWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B853A76E248AD40800838ECC /* CharlesProxyWrapperTests.swift */; };
 		B853A77A248AD40800838ECC /* CharlesProxyWrapperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B853A779248AD40800838ECC /* CharlesProxyWrapperUITests.swift */; };
+		B853A788248AE83000838ECC /* ProcessRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B853A787248AE83000838ECC /* ProcessRunner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		B853A775248AD40800838ECC /* CharlesProxyWrapperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharlesProxyWrapperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B853A779248AD40800838ECC /* CharlesProxyWrapperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharlesProxyWrapperUITests.swift; sourceTree = "<group>"; };
 		B853A77B248AD40800838ECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B853A787248AE83000838ECC /* ProcessRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessRunner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				B853A758248AD40300838ECC /* AppDelegate.swift */,
+				B853A787248AE83000838ECC /* ProcessRunner.swift */,
 				B853A75A248AD40300838ECC /* ContentView.swift */,
 				B853A75C248AD40800838ECC /* Assets.xcassets */,
 				B853A761248AD40800838ECC /* Main.storyboard */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B853A788248AE83000838ECC /* ProcessRunner.swift in Sources */,
 				B853A75B248AD40300838ECC /* ContentView.swift in Sources */,
 				B853A759248AD40300838ECC /* AppDelegate.swift in Sources */,
 			);
