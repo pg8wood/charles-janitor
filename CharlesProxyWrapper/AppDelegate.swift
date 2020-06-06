@@ -31,7 +31,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             guard let charlesInstance = charlesInstance,
                 error == nil else {
                     DispatchQueue.main.async {
-                        AlertController.showGenericOKAlert(
+                        AlertController.showBugAlert(
                             title: "Failed to open Charles.",
                             message: error?.localizedDescription ?? "Unknown error. 🤷‍♀️ \n\nPlease report this bug on GitHub.",
                             style: .critical,
@@ -58,7 +58,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 .compactMap({ $0 })
                 .filter({ !$0.isEmpty })
                 .first {
-                AlertController.showGenericOKAlert(title: "An error occurred disabling Wi-Fi proxies.", message: "Please report this bug on GitHub.")
+                AlertController.showBugAlert(title: "An error occurred disabling Wi-Fi proxies.", message: "Please report this bug on GitHub.")
             }
         }
         

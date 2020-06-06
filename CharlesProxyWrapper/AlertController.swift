@@ -10,6 +10,8 @@ import Cocoa
 
 class AlertController {
     
+    private static let 
+    
     static func presentMissingCharlesAlert() {
         NSApp.setActivationPolicy(.regular)
         
@@ -27,15 +29,25 @@ class AlertController {
         }
     }
     
-    static func showGenericOKAlert(title: String, message: String, style: NSAlert.Style = .informational, terminateOnClose: Bool = false) {
+    static func showBugAlert(title: String, message: String, style: NSAlert.Style = .informational, terminateOnClose: Bool = false) {
+        var terminateOnClose = terminateOnClose
+        
         NSApp.setActivationPolicy(.regular)
         
         let alert = NSAlert()
         alert.messageText = title
         alert.informativeText = message
         alert.alertStyle = style
-        alert.addButton(withTitle: "OK")
-        alert.runModal()
+        alert.addButton(withTitle: "Close")
+        alert.addButton(withTitle: "Report Bug")
+        switch alert.runModal() {
+        case .alertFirstButtonReturn:
+            terminateOnClose = true
+        case .alertSecondButtonReturn:
+            NSWorkspace.shared.open(<#T##url: URL##URL#>)
+        default:
+            break
+        }
         
         NSApp.setActivationPolicy(.accessory)
         

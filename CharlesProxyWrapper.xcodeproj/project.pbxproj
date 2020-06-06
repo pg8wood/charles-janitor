@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B853A755248AD40300838ECC /* CharlesProxyWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharlesProxyWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B853A755248AD40300838ECC /* Charles Janitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Charles Janitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B853A758248AD40300838ECC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B853A75C248AD40800838ECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B853A75F248AD40800838ECC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		B853A756248AD40300838ECC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B853A755248AD40300838ECC /* CharlesProxyWrapper.app */,
+				B853A755248AD40300838ECC /* Charles Janitor.app */,
 				B853A76A248AD40800838ECC /* CharlesProxyWrapperTests.xctest */,
 				B853A775248AD40800838ECC /* CharlesProxyWrapperUITests.xctest */,
 			);
@@ -141,9 +141,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B853A754248AD40300838ECC /* CharlesProxyWrapper */ = {
+		B853A754248AD40300838ECC /* Charles Janitor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B853A77E248AD40800838ECC /* Build configuration list for PBXNativeTarget "CharlesProxyWrapper" */;
+			buildConfigurationList = B853A77E248AD40800838ECC /* Build configuration list for PBXNativeTarget "Charles Janitor" */;
 			buildPhases = (
 				B853A751248AD40300838ECC /* Sources */,
 				B853A752248AD40300838ECC /* Frameworks */,
@@ -153,9 +153,9 @@
 			);
 			dependencies = (
 			);
-			name = CharlesProxyWrapper;
+			name = "Charles Janitor";
 			productName = CharlesProxyWrapper;
-			productReference = B853A755248AD40300838ECC /* CharlesProxyWrapper.app */;
+			productReference = B853A755248AD40300838ECC /* Charles Janitor.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B853A769248AD40800838ECC /* CharlesProxyWrapperTests */ = {
@@ -230,7 +230,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B853A754248AD40300838ECC /* CharlesProxyWrapper */,
+				B853A754248AD40300838ECC /* Charles Janitor */,
 				B853A769248AD40800838ECC /* CharlesProxyWrapperTests */,
 				B853A774248AD40800838ECC /* CharlesProxyWrapperUITests */,
 			);
@@ -296,12 +296,12 @@
 /* Begin PBXTargetDependency section */
 		B853A76C248AD40800838ECC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B853A754248AD40300838ECC /* CharlesProxyWrapper */;
+			target = B853A754248AD40300838ECC /* Charles Janitor */;
 			targetProxy = B853A76B248AD40800838ECC /* PBXContainerItemProxy */;
 		};
 		B853A777248AD40800838ECC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B853A754248AD40300838ECC /* CharlesProxyWrapper */;
+			target = B853A754248AD40300838ECC /* Charles Janitor */;
 			targetProxy = B853A776248AD40800838ECC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -573,7 +573,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B853A77E248AD40800838ECC /* Build configuration list for PBXNativeTarget "CharlesProxyWrapper" */ = {
+		B853A77E248AD40800838ECC /* Build configuration list for PBXNativeTarget "Charles Janitor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B853A77F248AD40800838ECC /* Debug */,
