@@ -10,7 +10,7 @@ import Cocoa
 
 class AlertController {
     
-    private static let 
+    private static let bugReportURL = URL(string: "https://github.com/pg8wood/charles-janitor/issues/new?assignees=pg8wood&labels=bug&template=bug-report.md&title=")!
     
     static func presentMissingCharlesAlert() {
         NSApp.setActivationPolicy(.regular)
@@ -44,7 +44,7 @@ class AlertController {
         case .alertFirstButtonReturn:
             terminateOnClose = true
         case .alertSecondButtonReturn:
-            NSWorkspace.shared.open(<#T##url: URL##URL#>)
+            NSWorkspace.shared.open(bugReportURL)
         default:
             break
         }
