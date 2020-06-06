@@ -38,13 +38,14 @@ class AlertController {
         alert.messageText = title
         alert.informativeText = message
         alert.alertStyle = style
-        alert.addButton(withTitle: "Close")
         alert.addButton(withTitle: "Report Bug")
+        alert.addButton(withTitle: "Close")
+        
         switch alert.runModal() {
         case .alertFirstButtonReturn:
-            terminateOnClose = true
-        case .alertSecondButtonReturn:
             NSWorkspace.shared.open(bugReportURL)
+        case .alertSecondButtonReturn:
+            terminateOnClose = true
         default:
             break
         }

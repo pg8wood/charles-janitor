@@ -33,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     DispatchQueue.main.async {
                         AlertController.showBugAlert(
                             title: "Failed to open Charles.",
-                            message: error?.localizedDescription ?? "Unknown error. 🤷‍♀️ \n\nPlease report this bug on GitHub.",
+                            message: error?.localizedDescription ?? "Unknown error. 🤷‍♀️ \n\nIf you think this is a bug, please report it on GitHub.",
                             style: .critical,
                             terminateOnClose: true)
                     }
