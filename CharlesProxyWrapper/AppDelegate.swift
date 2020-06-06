@@ -21,7 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.setActivationPolicy(.accessory)
         
         guard let charlesURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: charlesBundleID) else {
-            AlertController.presentMissingCharlesInstallWindow()
+            AlertController.presentMissingCharlesAlert()
             return
         }
         
@@ -47,6 +47,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private func observedApplicationIsTerminatedChange(_ application: NSRunningApplication, isTerminated: NSKeyValueObservedChange<Bool>) {
         func disableProxies() {
+            defer {
+                NSApp.terminate(self)
+            }
+            
             let webProxyOutput = ProcessRunner.shell("/usr/sbin/networksetup", ["-setwebproxystate", "Wi-Fi", "off"])
             let secureWebProxyOutput = ProcessRunner.shell("/usr/sbin/networksetup", ["-setsecurewebproxystate", "Wi-Fi", "off"])
             

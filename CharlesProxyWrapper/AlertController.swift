@@ -10,7 +10,7 @@ import Cocoa
 
 class AlertController {
     
-    static func presentMissingCharlesInstallWindow() {
+    static func presentMissingCharlesAlert() {
         NSApp.setActivationPolicy(.regular)
         
         let alert = NSAlert()
