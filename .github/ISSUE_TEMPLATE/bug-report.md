@@ -18,5 +18,5 @@ assignees: pg8wood
 
 **Other Information**
 <!-- Please complete the following information: -->
- - Device: <!-- [e.g. Macbook Pro 2016] --?
+ - Device: <!-- [e.g. Macbook Pro 2016] -->
  - OS: <!-- [e.g. macOS Catalina 10.15.5] -->
