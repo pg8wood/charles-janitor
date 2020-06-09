@@ -15,6 +15,7 @@
 		B853A77A248AD40800838ECC /* CharlesProxyWrapperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B853A779248AD40800838ECC /* CharlesProxyWrapperUITests.swift */; };
 		B853A788248AE83000838ECC /* ProcessRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B853A787248AE83000838ECC /* ProcessRunner.swift */; };
 		B853A78A248AF53E00838ECC /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B853A789248AF53E00838ECC /* AlertController.swift */; };
+		B8DCE51A249032D400115C5E /* CharlesRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCE519249032D400115C5E /* CharlesRunner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		B853A77B248AD40800838ECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B853A787248AE83000838ECC /* ProcessRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessRunner.swift; sourceTree = "<group>"; };
 		B853A789248AF53E00838ECC /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		B8DCE519249032D400115C5E /* CharlesRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharlesRunner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				B853A758248AD40300838ECC /* AppDelegate.swift */,
 				B853A789248AF53E00838ECC /* AlertController.swift */,
+				B8DCE519249032D400115C5E /* CharlesRunner.swift */,
 				B853A787248AE83000838ECC /* ProcessRunner.swift */,
 				B853A75C248AD40800838ECC /* Assets.xcassets */,
 				B853A761248AD40800838ECC /* Main.storyboard */,
@@ -271,6 +274,7 @@
 			files = (
 				B853A78A248AF53E00838ECC /* AlertController.swift in Sources */,
 				B853A788248AE83000838ECC /* ProcessRunner.swift in Sources */,
+				B8DCE51A249032D400115C5E /* CharlesRunner.swift in Sources */,
 				B853A759248AD40300838ECC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
