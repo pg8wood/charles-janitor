@@ -13,7 +13,6 @@
 		B8271D8024D4D561003F6472 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B8271D7F24D4D561003F6472 /* Credits.rtf */; };
 		B853A759248AD40300838ECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B853A758248AD40300838ECC /* AppDelegate.swift */; };
 		B853A75D248AD40800838ECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B853A75C248AD40800838ECC /* Assets.xcassets */; };
-		B853A760248AD40800838ECC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B853A75F248AD40800838ECC /* Preview Assets.xcassets */; };
 		B853A763248AD40800838ECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B853A761248AD40800838ECC /* Main.storyboard */; };
 		B853A76F248AD40800838ECC /* CharlesProxyWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B853A76E248AD40800838ECC /* CharlesProxyWrapperTests.swift */; };
 		B853A77A248AD40800838ECC /* CharlesProxyWrapperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B853A779248AD40800838ECC /* CharlesProxyWrapperUITests.swift */; };
