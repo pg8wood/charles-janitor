@@ -13,10 +13,12 @@ import SwiftUI
 class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem!
     
-    // TODO: - add attribution: see https://www.freepik.com/free-icon/cube-mop-clean_752833.htm#page=1&query=mop&position=8 
+    @IBOutlet weak var menu: NSMenu!
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         func setupStatusItem() {
             statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+            statusItem.menu = menu
             
             let icon = NSImage(named: "statusIcon")
             icon?.isTemplate = true
