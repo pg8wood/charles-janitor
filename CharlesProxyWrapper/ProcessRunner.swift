@@ -23,17 +23,12 @@ class ProcessRunner {
         process.launchPath = launchPath
         process.arguments = args
         
-        // Capture the process' output
         let pipe = Pipe()
         process.standardOutput = pipe
         
-        // Run the process
         process.launch()
         process.waitUntilExit()
         
-        if let output = String(data: pipe.fileHandleForReading.readDataToEndOfFile(),  encoding: String.Encoding.utf8) {
-            return output
-        }
-        return nil
+        return String(data: pipe.fileHandleForReading.readDataToEndOfFile(),  encoding: String.Encoding.utf8)
     }
 }

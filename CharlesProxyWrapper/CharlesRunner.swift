@@ -10,9 +10,10 @@ import AppKit
 
 struct CharlesRunner {
     private static let charlesBundleID = "com.xk72.Charles"
-    
     private static var charlesProcessObserver: NSKeyValueObservation?
     private static var charlesInstance: NSRunningApplication?
+    
+    private init() { }
     
     static func runCharles() {
         guard let charlesURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: charlesBundleID) else {
@@ -20,7 +21,7 @@ struct CharlesRunner {
             return
         }
         
-        NSWorkspace.shared.openApplication(at: charlesURL, configuration: .init()) { charlesInstance, error in            
+        NSWorkspace.shared.openApplication(at: charlesURL, configuration: .init()) { charlesInstance, error in
             guard let charlesInstance = charlesInstance, error == nil else {
                 DispatchQueue.main.async {
                     AlertController.showBugAlert(
@@ -46,11 +47,14 @@ struct CharlesRunner {
             let webProxyOutput = ProcessRunner.shell("/usr/sbin/networksetup", ["-setwebproxystate", "Wi-Fi", "off"])
             let secureWebProxyOutput = ProcessRunner.shell("/usr/sbin/networksetup", ["-setsecurewebproxystate", "Wi-Fi", "off"])
             
-            if let _ = [webProxyOutput, secureWebProxyOutput]
+            let errors = [webProxyOutput, secureWebProxyOutput]
                 .compactMap({ $0 })
                 .filter({ !$0.isEmpty })
-                .first {
-                AlertController.showBugAlert(title: "An error occurred disabling Wi-Fi proxies.", message: "Please report this bug on GitHub.")
+            
+            if let errorMessage = errors.first {
+                AlertController.showBugAlert(title: "An error occurred disabling Wi-Fi proxies.",
+                                             message: "Please report this bug on GitHub.\n\(errorMessage)",
+                                             style: .critical)
             }
         }
         
