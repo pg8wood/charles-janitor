@@ -8,17 +8,17 @@
 import Foundation
 
 enum ProxyManager {
+    private static let relevantProxySettingKeys = Set([
+        kCFNetworkProxiesHTTPEnable,
+        kCFNetworkProxiesHTTPSEnable
+    ])
+    
     private static var QCFNetworkCopySystemProxySettings: CFDictionary? {
         guard let proxiesSettingsUnmanaged = CFNetworkCopySystemProxySettings() else {
             return nil
         }
         return proxiesSettingsUnmanaged.takeRetainedValue()
     }
-    
-    private static let relevantProxySettingKeys = Set([
-        kCFNetworkProxiesHTTPEnable,
-        kCFNetworkProxiesHTTPSEnable
-    ])
     
     private static var filteredProxySettings: [String: Bool] {
         guard let allProxySettings = QCFNetworkCopySystemProxySettings as? [String: AnyObject] else {

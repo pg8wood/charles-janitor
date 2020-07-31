@@ -83,6 +83,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8271D7A24D4C51E003F6472 /* Proxy Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B8271D7624D4B8AF003F6472 /* ProxyManager.swift */,
+				B853A787248AE83000838ECC /* ProcessRunner.swift */,
+			);
+			path = "Proxy Utilities";
+			sourceTree = "<group>";
+		};
+		B8271D7B24D4C54B003F6472 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B853A789248AF53E00838ECC /* AlertController.swift */,
+				B8271D7824D4BBAA003F6472 /* NotificationController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		B853A74C248AD40200838ECC = {
 			isa = PBXGroup;
 			children = (
@@ -107,11 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				B853A758248AD40300838ECC /* AppDelegate.swift */,
-				B8271D7624D4B8AF003F6472 /* ProxyManager.swift */,
-				B853A789248AF53E00838ECC /* AlertController.swift */,
 				B8DCE519249032D400115C5E /* CharlesRunner.swift */,
-				B8271D7824D4BBAA003F6472 /* NotificationController.swift */,
-				B853A787248AE83000838ECC /* ProcessRunner.swift */,
+				B8271D7B24D4C54B003F6472 /* UI */,
+				B8271D7A24D4C51E003F6472 /* Proxy Utilities */,
 				B853A75C248AD40800838ECC /* Assets.xcassets */,
 				B853A761248AD40800838ECC /* Main.storyboard */,
 				B853A764248AD40800838ECC /* Info.plist */,
