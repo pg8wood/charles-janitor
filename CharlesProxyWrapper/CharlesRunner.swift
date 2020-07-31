@@ -48,13 +48,7 @@ struct CharlesRunner {
                 return
             }
             
-            let webProxyOutput = ProcessRunner.shell("/usr/sbin/networksetup", ["-setwebproxystate", "Wi-Fi", "off"])
-            let secureWebProxyOutput = ProcessRunner.shell("/usr/sbin/networksetup", ["-setsecurewebproxystate", "Wi-Fi", "off"])
-            
-            let errorMessage = [webProxyOutput, secureWebProxyOutput]
-                .compactMap({ $0 })
-                .filter({ !$0.isEmpty })
-                .joined()
+            let errorMessage = ProxyManager.disableAllProxies()
             
             guard errorMessage.isEmpty else {
                 AlertController.showBugAlert(title: "An error occurred disabling Wi-Fi proxies.",

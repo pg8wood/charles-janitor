@@ -37,4 +37,25 @@ enum ProxyManager {
     static var areAnyProxiesEnabled: Bool {
         filteredProxySettings.values.contains(true)
     }
+    
+    /// Disables HTTP and HTTPS proxies for each network service in NetworkService.
+    /// - returns: a String with an error message if any errors occurred
+    static func disableAllProxies() -> String {
+        NetworkService.allCases.reduce(into: "", { errors, service in
+            print(service)
+            let webProxyOutput = ProcessRunner.shell("/usr/sbin/networksetup", ["-setwebproxystate", service.rawValue, "off"])
+            let secureWebProxyOutput = ProcessRunner.shell("/usr/sbin/networksetup", ["-setsecurewebproxystate", service.rawValue, "off"])
+            
+            let errorMessages = [webProxyOutput, secureWebProxyOutput]
+                .compactMap({ $0 })
+                .filter({ !$0.isEmpty })
+                .joined()
+            
+            if errorMessages.isEmpty {
+                return
+            }
+            
+            errors.append(errorMessages)
+        })
+    }
 }
