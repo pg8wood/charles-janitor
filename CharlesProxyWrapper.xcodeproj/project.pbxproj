@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8271D7724D4B996003F6472 /* ProxyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8271D7624D4B8AF003F6472 /* ProxyManager.swift */; };
+		B8271D7924D4BC96003F6472 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8271D7824D4BBAA003F6472 /* NotificationController.swift */; };
 		B853A759248AD40300838ECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B853A758248AD40300838ECC /* AppDelegate.swift */; };
 		B853A75D248AD40800838ECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B853A75C248AD40800838ECC /* Assets.xcassets */; };
 		B853A760248AD40800838ECC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B853A75F248AD40800838ECC /* Preview Assets.xcassets */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B8271D7624D4B8AF003F6472 /* ProxyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyManager.swift; sourceTree = "<group>"; };
+		B8271D7824D4BBAA003F6472 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		B853A755248AD40300838ECC /* Charles Janitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Charles Janitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B853A758248AD40300838ECC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B853A75C248AD40800838ECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,8 +107,10 @@
 			isa = PBXGroup;
 			children = (
 				B853A758248AD40300838ECC /* AppDelegate.swift */,
+				B8271D7624D4B8AF003F6472 /* ProxyManager.swift */,
 				B853A789248AF53E00838ECC /* AlertController.swift */,
 				B8DCE519249032D400115C5E /* CharlesRunner.swift */,
+				B8271D7824D4BBAA003F6472 /* NotificationController.swift */,
 				B853A787248AE83000838ECC /* ProcessRunner.swift */,
 				B853A75C248AD40800838ECC /* Assets.xcassets */,
 				B853A761248AD40800838ECC /* Main.storyboard */,
@@ -272,8 +278,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8271D7924D4BC96003F6472 /* NotificationController.swift in Sources */,
 				B853A78A248AF53E00838ECC /* AlertController.swift in Sources */,
 				B853A788248AE83000838ECC /* ProcessRunner.swift in Sources */,
+				B8271D7724D4B996003F6472 /* ProxyManager.swift in Sources */,
 				B8DCE51A249032D400115C5E /* CharlesRunner.swift in Sources */,
 				B853A759248AD40300838ECC /* AppDelegate.swift in Sources */,
 			);

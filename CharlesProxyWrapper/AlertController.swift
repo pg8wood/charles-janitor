@@ -29,6 +29,7 @@ class AlertController {
         }
     }
     
+    /// Shows an alert that an error occurred. Switches to a Dock app while the alert is present and back to a status bar app when the alert is closed
     static func showBugAlert(title: String, message: String, style: NSAlert.Style = .informational, terminateOnClose: Bool = false) {
         var terminateOnClose = terminateOnClose
         

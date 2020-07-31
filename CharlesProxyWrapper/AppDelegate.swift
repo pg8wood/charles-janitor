@@ -6,7 +6,7 @@
 //  Copyright © 2020 Patrick Gatewood. All rights reserved.
 //
 
-import Cocoa
+import AppKit
 import SwiftUI
 
 @NSApplicationMain
@@ -24,6 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         NSApp.setActivationPolicy(.accessory)
+        NSUserNotificationCenter.default.delegate = NotificationController.shared
         setupStatusItem()
         CharlesRunner.runCharles()
     }

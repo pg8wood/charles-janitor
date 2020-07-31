@@ -44,18 +44,26 @@ struct CharlesRunner {
                 NSApp.terminate(self)
             }
             
+            guard ProxyManager.areAnyProxiesEnabled else {
+                return
+            }
+            
             let webProxyOutput = ProcessRunner.shell("/usr/sbin/networksetup", ["-setwebproxystate", "Wi-Fi", "off"])
             let secureWebProxyOutput = ProcessRunner.shell("/usr/sbin/networksetup", ["-setsecurewebproxystate", "Wi-Fi", "off"])
             
-            let errors = [webProxyOutput, secureWebProxyOutput]
+            let errorMessage = [webProxyOutput, secureWebProxyOutput]
                 .compactMap({ $0 })
                 .filter({ !$0.isEmpty })
+                .joined()
             
-            if let errorMessage = errors.first {
+            guard errorMessage.isEmpty else {
                 AlertController.showBugAlert(title: "An error occurred disabling Wi-Fi proxies.",
-                                             message: "Please report this bug on GitHub.\n\(errorMessage)",
-                                             style: .critical)
+                                              message: "Please report this bug on GitHub.\n\n\(errorMessage)",
+                                              style: .critical)
+                return
             }
+            
+            NotificationController.shared.showCleanupNotification()
         }
         
         guard let charlesInstance = self.charlesInstance ??
