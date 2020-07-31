@@ -1,6 +1,6 @@
 //
 //  AlertController.swift
-//  CharlesProxyWrapper
+//  Charles Janitor
 //
 //  Created by Patrick Gatewood on 6/5/20.
 //  Copyright © 2020 Patrick Gatewood. All rights reserved.

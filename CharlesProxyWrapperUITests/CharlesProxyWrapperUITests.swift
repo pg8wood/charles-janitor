@@ -1,6 +1,6 @@
 //
-//  CharlesProxyWrapperUITests.swift
-//  CharlesProxyWrapperUITests
+//  Charles JanitorUITests.swift
+//  Charles JanitorUITests
 //
 //  Created by Patrick Gatewood on 6/5/20.
 //  Copyright © 2020 Patrick Gatewood. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class CharlesProxyWrapperUITests: XCTestCase {
+class Charles JanitorUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

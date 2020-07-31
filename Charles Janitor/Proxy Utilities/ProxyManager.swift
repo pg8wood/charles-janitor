@@ -1,6 +1,6 @@
 //
 //  ProxyManager.swift
-//  CharlesProxyWrapper
+//  Charles Janitor
 //
 //  Created by Patrick Gatewood on 7/31/20.
 //  Copyright © 2020 Patrick Gatewood. All rights reserved.

@@ -17,7 +17,7 @@
                BlueprintIdentifier = "B853A754248AD40300838ECC"
                BuildableName = "Charles Janitor.app"
                BlueprintName = "Charles Janitor"
-               ReferencedContainer = "container:CharlesProxyWrapper.xcodeproj">
+               ReferencedContainer = "container:Charles Janitor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B853A769248AD40800838ECC"
-               BuildableName = "CharlesProxyWrapperTests.xctest"
-               BlueprintName = "CharlesProxyWrapperTests"
-               ReferencedContainer = "container:CharlesProxyWrapper.xcodeproj">
+               BuildableName = "Charles JanitorTests.xctest"
+               BlueprintName = "Charles JanitorTests"
+               ReferencedContainer = "container:Charles Janitor.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B853A774248AD40800838ECC"
-               BuildableName = "CharlesProxyWrapperUITests.xctest"
-               BlueprintName = "CharlesProxyWrapperUITests"
-               ReferencedContainer = "container:CharlesProxyWrapper.xcodeproj">
+               BuildableName = "Charles JanitorUITests.xctest"
+               BlueprintName = "Charles JanitorUITests"
+               ReferencedContainer = "container:Charles Janitor.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -67,7 +67,7 @@
             BlueprintIdentifier = "B853A754248AD40300838ECC"
             BuildableName = "Charles Janitor.app"
             BlueprintName = "Charles Janitor"
-            ReferencedContainer = "container:CharlesProxyWrapper.xcodeproj">
+            ReferencedContainer = "container:Charles Janitor.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -84,7 +84,7 @@
             BlueprintIdentifier = "B853A754248AD40300838ECC"
             BuildableName = "Charles Janitor.app"
             BlueprintName = "Charles Janitor"
-            ReferencedContainer = "container:CharlesProxyWrapper.xcodeproj">
+            ReferencedContainer = "container:Charles Janitor.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
